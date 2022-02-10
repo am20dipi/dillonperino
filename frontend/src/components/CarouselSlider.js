@@ -13,7 +13,7 @@ function CarouselSlider(){
                         alt="First slide"
                         style={{width: '220px'}}
                     />
-                    <Carousel.Caption style={{color: 'gray'}}>
+                    <Carousel.Caption style={{color: 'white'}}>
                         <h2 style={{fontSize: '30px'}}>Congruent Disillusion</h2>
                         <p>Mixed media on canvas. 9x12 inches. 2021.</p>
                     </Carousel.Caption>

@@ -34,7 +34,6 @@ nav {
 }
 
 
-
 .page-footer{
   bottom: 0;
 }
@@ -43,9 +42,6 @@ nav {
   font-size: 40px;
   color: black
 }
-
-
-
 
 .carousel img {
 
@@ -142,7 +138,6 @@ nav {
 }
 
 
-
 .wrapper {
   display: flex;
 }
@@ -180,7 +175,6 @@ nav {
 }
 
 
-
 .social-menu{
   text-align: left;
 }
@@ -198,15 +192,15 @@ nav {
 }
 
 .social-menu ul li .fa-brands {
-  font-size: 30px;
-  line-height: 55px;
+  font-size: 23px;
+  line-height: 40px;
   transition: 0.6s;
   color: #000;
 }
 
 .fa-regular {
-  font-size: 28px;
-  line-height: 55px;
+  font-size: 20px;
+  line-height: 40px;
   transition: 0.6s;
   color: #000;
 }
@@ -214,8 +208,8 @@ nav {
 .social-menu ul li a{
 
   display: block;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   background-color: #fff;
   text-align: center;

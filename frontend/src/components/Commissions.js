@@ -9,12 +9,18 @@ function Commissions(){
     return (
         <div className="wrapper" style={{display: 'flex'}}>
             <section className="left">
+                <h2>DILLON PERINO</h2>
                 <Sidenav/>
             </section>
             <section className="right">
             
                 <div className="img-gallery">
-                    <h2 style={{textAlign: 'left'}}>commissions<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}></p></h2>
+                    <h2 style={{textAlign: 'left'}}>
+                        commissions
+                        <p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>
+                            A visual representing my passion for both art and music. 
+                        </p>
+                    </h2>
                     <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://ageofapocalypseny.bandcamp.com/album/grim-wisdom')}>
                         <img src={ageof}/>
                         <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> Age of Apocalypse -- Grim Wisdom -- Record Cover --  </p>
@@ -31,9 +37,9 @@ function Commissions(){
                         <img src={brokeninrefraction}/>
                         <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Sanction -- broken in refraction -- Record Cover --  </p>
                     </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://sanction631.bandcamp.com/album/broken-in-refraction')}>
+                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://open.spotify.com/album/6UXbKRqhxsyfc4JoiBERpt')}>
                         <img src={lifegoeson}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Sanction -- broken in refraction -- Record Cover --  </p>
+                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Bind -- Life Goes On-- Record Cover --  </p>
                     </div>
                 </div>
             </section>
@@ -43,9 +49,3 @@ function Commissions(){
 }
 
 export default Commissions
-
-// 
-// Bind Life goes on
-// 
-// 
-// 
