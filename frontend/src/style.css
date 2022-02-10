@@ -7,9 +7,45 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family:'Helvetica', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  width: auto;
+  border: none;
+  margin: 8rem; 
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+
+nav {
+  position: relative;
+  margin: 0;
+  padding-top: 0px;
+  top: 0;
+}
+
+.page-footer{
+  bottom: 0;
+}
+
+.fa-instagram {
+  font-size: 40px;
+  color: black
+}
+
+.fa-instagram:hover {
+  color: red;
+  transition: 0.5s;
+}
+
+
+

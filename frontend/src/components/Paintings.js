@@ -6,3 +6,5 @@ function Paintings(){
 
     )
 }
+
+export default Paintings
