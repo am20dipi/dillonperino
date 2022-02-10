@@ -23,6 +23,9 @@ function Sidenav(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/commissions">commissions</Link>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/donate">donate</Link>
+                </li>
                 <br/>
                 <li className="nav-item">
                     <Contact/>

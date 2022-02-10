@@ -18,7 +18,7 @@ function Commissions(){
                     <h2 style={{textAlign: 'left'}}>
                         commissions
                         <p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>
-                            A visual representing my passion for both art and music. 
+                            A visual representation of my passion for both art and music. Click to listen. 
                         </p>
                     </h2>
                     <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://ageofapocalypseny.bandcamp.com/album/grim-wisdom')}>

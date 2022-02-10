@@ -10,6 +10,7 @@ import Flashes from './Flashes.js'
 import Commissions from './Commissions.js'
 import Charcoal from './Charcoal.js'
 import Footer from './Footer.js'
+import Donate from './Donate.js'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/paintings" element={<Paintings />} />
           <Route path="/charcoal" element={<Charcoal />} />
           <Route path="/commissions" element={<Commissions />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
         
       </BrowserRouter>
