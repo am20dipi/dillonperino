@@ -1,11 +1,35 @@
+import { Link } from 'react-router-dom'
+import Contact from './Contact'
+
 function Sidenav(){
     return (
-        <div className="side-menu">
-            <div className="top-section">
-                <h5>DP</h5>
-                <p className="text-muted">Modern oil-focused painter based out of New York.</p>
-            </div>
-        </div>
+        <nav>
+            <ul className="navbar-nav">
+                <li className="nav-item active" >
+                    <Link className="nav-link" to="/">home</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/about">about</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/paintings">paintings</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/flashes">flashes</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/charcoal">charcoal</Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/commissions">commissions</Link>
+                </li>
+                <br/>
+                <li className="nav-item">
+                    <Contact/>
+                </li>
+                
+            </ul>
+         </nav>
     )
 }
 

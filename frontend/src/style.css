@@ -44,10 +44,7 @@ nav {
   color: black
 }
 
-.fa-instagram:hover {
-  color: red;
-  transition: 0.5s;
-}
+
 
 
 .carousel img {
@@ -114,6 +111,26 @@ nav {
   transition: opacity .2s, visibility .2s;
 }
 
+.img__description#painting {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(209, 220, 226, 0.72);
+  color: rgb(2, 2, 2);
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description#painting {
+  visibility: visible;
+  opacity: 1;
+}
+
 .img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
@@ -125,12 +142,12 @@ nav {
 }
 
 .left {
-  flex: 0.8;
+  flex: 15%;
   padding: 30px;
 }
 
 .right { 
-  flex: 2;
+  flex: 85%;
   padding: 30px;
 }
 
@@ -148,3 +165,67 @@ nav {
 
 }
 
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+
+
+.social-menu{
+  text-align: left;
+}
+
+.social-menu ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.social-menu ul li {
+  list-style: none;
+  padding: 10px;
+  float: left;
+}
+
+.social-menu ul li .fa-brands {
+  font-size: 30px;
+  line-height: 55px;
+  transition: 0.6s;
+  color: #000;
+}
+
+.fa-regular {
+  font-size: 28px;
+  line-height: 55px;
+  transition: 0.6s;
+  color: #000;
+}
+
+.social-menu ul li a{
+
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #fff;
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 0px 12px 3px  rgb(179, 171, 171)
+}
+
+.social-menu ul li a:hover{
+  cursor: pointer; 
+  transform: translate(8px, 0);
+}
+
+
+#about {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-gap: 10px;
+}
