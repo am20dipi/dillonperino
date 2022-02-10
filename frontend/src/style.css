@@ -21,7 +21,6 @@ code {
   width: auto;
   border: none;
   margin: 8rem; 
-  margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
 
@@ -32,6 +31,8 @@ nav {
   padding-top: 0px;
   top: 0;
 }
+
+
 
 .page-footer{
   bottom: 0;
@@ -46,6 +47,39 @@ nav {
   color: red;
   transition: 0.5s;
 }
+
+
+.carousel img {
+
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 100%;
+  width: auto;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+
+.carousel {
+  height: 700px;
+}
+
+.carousel-control {
+  opacity: 0;
+}
+
+
+
+
+
 
 
 
