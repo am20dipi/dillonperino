@@ -16,17 +16,53 @@ function Charcoal(){
     return (
         <div className="container">
             <div className="img-gallery">
-                <h2>charcoal</h2>
-                <img src={standupslow}/>
-                <img src={deadeyes}/>
-                <img src={courage}/>
-                <img src={withheld}/>
-                <img src={tonowhere}/>
-                <img src={untilthen}/>
-                <img src={celiaathome}/>
-                <img src={christalone}/>
-                <img src={disintegratingeden}/>
-                <img src={emptyroom}/>
+                <h2 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings.</p></h2>
+                <div className="img__wrap">
+                    <img src={standupslow}/>
+                    <p style={{padding: '10px'}} className="img__description">Stand up slow. Charcoal and acrylic on paper. 11x14 inches. 2019.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={deadeyes}/>
+                    <p style={{padding: '10px'}} className="img__description">Dead eyes. 2018.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={courage}/>
+                    <p style={{padding: '10px'}} className="img__description">It takes courage falling so far. 2017.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={withheld}/> 
+                    <p style={{padding: '10px'}} className="img__description">Withheld. Pastel and charcoal on paper. 18x24 inches. 2019.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={tonowhere}/>
+                    <p style={{padding: '10px'}} className="img__description">To nowhere. Charcoal on paper. 18x24 inches. 2019.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={untilthen}/>
+                    <p style={{padding: '10px'}} className="img__description">Until then. Pastel and charcoal on paper. 14x17 inches. 2019.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={celiaathome}/>
+                    <p style={{padding: '10px'}} className="img__description">Celia at home. Charcoal and acrylic on paper. 18x24 inches. 2020.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={christalone}/>
+                    <p style={{padding: '10px'}} className="img__description">Misunderstood because he wanted to meet christ alone. 2017.</p>
+                </div>
+                <div className="img__wrap">
+                    <img src={disintegratingeden}/>
+                    <p style={{padding: '10px'}} className="img__description">Disintegrating eden. 2016. </p>
+                </div>
+                <div className="img__wrap">
+                    <img src={emptyroom}/>
+                    <p style={{padding: '10px'}} className="img__description">From an empty room I dreamt it was the end. Charcoal and Acrylic on paper. 18x24 inches. 2020.</p>
+                </div>
+                
+                
+                
+                
+                
+                
 
             </div>
         </div>
@@ -36,9 +72,9 @@ function Charcoal(){
 export default Charcoal
 
 
-// To nowhere. 2019. Charcoal on paper. 18in x 24in
-// Withheld. 2019. Pastel and charcoal on paper. 18in x 24in
-// Celia at home. 2020. Charcoal and acrylic on paper. 18in x 24in.
-// Until then. 2019. Pastel and charcoal on paper. 14in x 17in
-// Stand up slow. 2019 charcoal and acrylic on paper 11in x 14in
-// From an empty room I dreamt it was the end. 2020. Charcoal and Acrylic on paper. 18 x 24
+// 
+// 
+// 
+// 
+
+// 
