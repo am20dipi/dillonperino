@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import About from './About.js'
 import Navbar from './Navbar.js'
-import Sidenav from './Sidenav.js'
+import Paintings from './Paintings.js'
 import Contact from './Contact.js'
-import Work from './Work.js'
+import Flashes from './Flashes.js'
 import Commissions from './Commissions.js'
+import Charcoal from './Charcoal.js'
 import Footer from './Footer.js'
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/work" element={<Work />} />
+          <Route path="/flashes" element={<Flashes />} />
+          <Route path="/paintings" element={<Paintings />} />
+          <Route path="/charcoal" element={<Charcoal />} />
           <Route path="/commissions" element={<Commissions />} />
         </Routes>
         

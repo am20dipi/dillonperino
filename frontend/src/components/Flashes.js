@@ -1,7 +1,11 @@
 function Flashes(){
     return (
         <div className="container">
-            <h2>flashes</h2>
+
+            <div className="img-gallery">
+                <h2>flashes</h2>
+
+            </div>
         </div>
     )
 }
