@@ -134,7 +134,13 @@ nav {
 .img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
+  
 }
+
+#commission:hover {
+  transform: translate(0, -10px);
+}
+
 
 
 .wrapper {
