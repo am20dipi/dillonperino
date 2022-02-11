@@ -4,6 +4,9 @@ import bindtruecolors from '../images/commissions/bindtruecolors.png'
 import brokeninrefraction from '../images/commissions/brokeninrefraction.jpg'
 import rulethemall from '../images/commissions/rulethemall.png'
 import lifegoeson from '../images/commissions/lifegoeson.jpg'
+import vamachara from '../images/commissions/vamachara.jpg'
+import atonement from '../images/commissions/atonement.jpg'
+
 
 function Commissions(){
     return (
@@ -40,6 +43,14 @@ function Commissions(){
                     <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://open.spotify.com/album/6UXbKRqhxsyfc4JoiBERpt')}>
                         <img src={lifegoeson}/>
                         <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Bind -- Life Goes On-- Record Cover --  </p>
+                    </div>
+                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://vamacharahc.bandcamp.com/album/despondent')}>
+                        <img src={vamachara}/>
+                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Vamachara -- Despondent -- EP </p>
+                    </div>
+                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://atonementcthc.bandcamp.com/')}>
+                        <img src={atonement}/>
+                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Atonement -- In Search of Divinity -- EP </p>
                     </div>
                 </div>
             </section>

@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 import Contact from './Contact'
 
+
+
 function Sidenav(){
     return (
         <nav>
             <ul className="navbar-nav">
-                <li className="nav-item active" >
-                    <Link className="nav-link" to="/">home</Link>
+                <li className="nav-item" >
+                    <Link activeStyle={{
+                        fontWeight: 'bold'
+                    }} className="nav-link" to="/">home</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/about">about</Link>
