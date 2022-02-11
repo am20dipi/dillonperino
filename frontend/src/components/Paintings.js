@@ -7,13 +7,12 @@ function Paintings(){
     return(
         <div className="wrapper" style={{display: 'flex'}}>
             <section className="left">
-                <h2>DILLON PERINO</h2>
                 <Sidenav/>
             </section>
             <section className="right">
             
                 <div className="img-gallery">
-                    <h2 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A deeper dive into my favorite medium.</p></h2>
+                    <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A deeper dive into my favorite medium.</p></h1>
                     <div className="img__wrap">
                         <img src={congruent}/>
                         <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Congruent. Mixed media on canvas. 9x12 inches. 2021.  </p>

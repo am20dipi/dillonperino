@@ -6,7 +6,7 @@ import About from './About.js'
 import Navbar from './Navbar.js'
 import Paintings from './Paintings.js'
 import Contact from './Contact.js'
-import Flashes from './Flashes.js'
+import Flash from './Flash.js'
 import Commissions from './Commissions.js'
 import Charcoal from './Charcoal.js'
 import Footer from './Footer.js'
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/flashes" element={<Flashes />} />
+          <Route path="/flash" element={<Flash />} />
           <Route path="/paintings" element={<Paintings />} />
           <Route path="/charcoal" element={<Charcoal />} />
           <Route path="/commissions" element={<Commissions />} />

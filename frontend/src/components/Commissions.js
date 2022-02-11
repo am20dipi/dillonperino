@@ -12,18 +12,17 @@ function Commissions(){
     return (
         <div className="wrapper" style={{display: 'flex'}}>
             <section className="left">
-                <h2>DILLON PERINO</h2>
                 <Sidenav/>
             </section>
             <section className="right">
             
                 <div className="img-gallery">
-                    <h2 style={{textAlign: 'left'}}>
+                    <h1 style={{textAlign: 'left'}}>
                         commissions
                         <p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>
                             A visual representation of my passion for both art and music. Click to listen. 
                         </p>
-                    </h2>
+                    </h1>
                     <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://ageofapocalypseny.bandcamp.com/album/grim-wisdom')}>
                         <img src={ageof}/>
                         <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> Age of Apocalypse -- Grim Wisdom -- Record Cover --  </p>

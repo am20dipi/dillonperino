@@ -14,7 +14,7 @@ function CarouselSlider(){
                         style={{width: '220px'}}
                     />
                     <Carousel.Caption style={{color: 'white'}}>
-                        <h2 style={{fontSize: '30px'}}>Congruent Disillusion</h2>
+                        <h2 style={{fontSize: '30px', fontFamily: 'helvetica'}}>Congruent Disillusion</h2>
                         <p>Mixed media on canvas. 9x12 inches. 2021.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -26,7 +26,7 @@ function CarouselSlider(){
                     />
 
                     <Carousel.Caption style={{color: 'white'}}>
-                        <h2 style={{fontSize: '30px'}}>In between</h2>
+                        <h2 style={{fontSize: '30px', fontFamily: 'helvetica'}}>In between</h2>
                         <p>Charcoal and acrylic on paper. 18x24 inches. 2018.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -38,7 +38,7 @@ function CarouselSlider(){
                     />
 
                     <Carousel.Caption style={{color: 'white'}}>
-                        <h2 style={{fontSize: '30px'}}>The brighter side of nothing</h2>
+                        <h2 style={{fontSize: '30px', fontFamily: 'helvetica'}}>The brighter side of nothing</h2>
                         <p>Mixed media on canvas. 9x12 inches. 2020.</p>
                     </Carousel.Caption>
                 </Carousel.Item>

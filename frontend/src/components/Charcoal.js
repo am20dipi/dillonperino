@@ -32,13 +32,12 @@ function Charcoal(){
     return (
         <div className="wrapper" style={{display: 'flex'}}>
             <section className="left">
-                <h2>DILLON PERINO</h2>
                 <Sidenav/>
             </section>
 
             <section className="right" style={{flex: '90%'}}>
                 <div className="img-gallery">
-                    <h2 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings spanning from 2016-present.</p></h2>
+                    <h1 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings spanning from 2016-present.</p></h1>
                     <div className="img__wrap">
                         <img src={standupslow}/>
                         <p style={{padding: '10px'}} className="img__description">Stand up slow. Charcoal and acrylic on paper. 11x14 inches. 2019.</p>

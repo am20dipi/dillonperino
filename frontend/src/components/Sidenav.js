@@ -6,6 +6,7 @@ import Contact from './Contact'
 function Sidenav(){
     return (
         <nav>
+            <h2>DILLON PERINO</h2>
             <ul className="navbar-nav">
                 <li className="nav-item" >
                     <Link activeStyle={{
@@ -19,7 +20,7 @@ function Sidenav(){
                     <Link className="nav-link" to="/paintings">paintings</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/flashes">flashes</Link>
+                    <Link className="nav-link" to="/flash">flash</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/charcoal">charcoal</Link>
