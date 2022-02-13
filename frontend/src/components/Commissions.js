@@ -7,6 +7,44 @@ import lifegoeson from '../images/commissions/lifegoeson.jpg'
 import vamachara from '../images/commissions/vamachara.jpg'
 import atonement from '../images/commissions/atonement.jpg'
 
+const commissions = [
+    {
+        image: ageof,
+        description: 'Age of Apocalypse -- Grim Wisdom -- Record Cover ',
+        link: 'https://ageofapocalypseny.bandcamp.com/album/grim-wisdom'
+    },
+    {
+        image: bindtruecolors,
+        description: 'Bind -- True colors -- EP cover',
+        link:'https://pleadyourcaserecords.bandcamp.com/album/pyc008-true-colors'
+    },
+    {
+        image: brokeninrefraction,
+        description: 'Sanction -- broken in refraction -- Record Cover',
+        link: 'https://sanction631.bandcamp.com/album/broken-in-refraction'
+    },
+    {
+        image: rulethemall,
+        description: 'Rule them all -- blueprint for change -- EP cover',
+        link: 'https://rulethemallhc.bandcamp.com/releases'
+    },
+    {
+        image: lifegoeson,
+        description: 'Bind -- Life Goes On-- Record Cover',
+        link: 'https://open.spotify.com/album/6UXbKRqhxsyfc4JoiBERpt'
+    },
+    {
+        image: vamachara,
+        description: 'Vamachara -- Despondent -- EP',
+        link: 'https://vamacharahc.bandcamp.com/album/despondent'
+    },
+    {
+        image: atonement,
+        description: 'Atonement -- In Search of Divinity -- EP ',
+        link: 'https://atonementcthc.bandcamp.com/'
+    }
+]
+
 
 function Commissions(){
     return (
@@ -20,37 +58,18 @@ function Commissions(){
                     <h1 style={{textAlign: 'left'}}>
                         commissions
                         <p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>
-                            A visual representation of my passion for both art and music. Click to listen. 
+                            Click to listen. 
                         </p>
                     </h1>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://ageofapocalypseny.bandcamp.com/album/grim-wisdom')}>
-                        <img src={ageof}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> Age of Apocalypse -- Grim Wisdom -- Record Cover --  </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}}  id="commission"onClick={() => window.open('https://pleadyourcaserecords.bandcamp.com/album/pyc008-true-colors')}>
-                        <img src={bindtruecolors}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> Bind -- True colors -- EP cover -- </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://rulethemallhc.bandcamp.com/releases')}>
-                        <img src={rulethemall}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> Rule them all -- blueprint for change -- EP cover -- </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://sanction631.bandcamp.com/album/broken-in-refraction')}>
-                        <img src={brokeninrefraction}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Sanction -- broken in refraction -- Record Cover --  </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://open.spotify.com/album/6UXbKRqhxsyfc4JoiBERpt')}>
-                        <img src={lifegoeson}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Bind -- Life Goes On-- Record Cover --  </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://vamacharahc.bandcamp.com/album/despondent')}>
-                        <img src={vamachara}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Vamachara -- Despondent -- EP </p>
-                    </div>
-                    <div style={{cursor: 'pointer'}} id="commission" onClick={() => window.open('https://atonementcthc.bandcamp.com/')}>
-                        <img src={atonement}/>
-                        <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description">Atonement -- In Search of Divinity -- EP </p>
-                    </div>
+                    {commissions.map((commission, index) => {
+                        return (
+                            <div style={{cursor: 'pointer'}} id="commission" key={index} onClick={() => window.open(commission.link)}>
+                                <img src={commission.image}/>
+                                <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> {commission.description}</p>
+                            </div>
+                        )
+                    })}
+                
                 </div>
             </section>
         </div>

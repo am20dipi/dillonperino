@@ -5,12 +5,55 @@ import IMG_9808 from '../images/flash/IMG_9808.jpg'
 import IMG_9809 from '../images/flash/IMG_9809.jpg'
 import IMG_9810 from '../images/flash/IMG_9810.jpg'
 import IMG_9811 from '../images/flash/IMG_9811.jpg'
-import IMG_9816 from '../images/flash/IMG_9816.jpg'
+
 import IMG_9820 from '../images/flash/IMG_9820.jpg'
 import IMG_9823 from '../images/flash/IMG_9823.jpg'
 import IMG_9825 from '../images/flash/IMG_9825.jpg'
 import IMG_9831 from '../images/flash/IMG_9831.jpg'
-import IMG_9837 from '../images/flash/IMG_9837.jpg'
+
+
+const flashes = [
+    {
+        image: IMG_9805,
+        description: '2021.'
+    },
+    {
+        image: IMG_9806,
+        description: '2021'
+    },
+    {
+        image: IMG_9808,
+        description: '2021'
+    },
+    {
+        image: IMG_9809,
+        description: '2021'
+    },
+    {
+        image: IMG_9810,
+        description: '2021'
+    },
+    {
+        image: IMG_9811,
+        description: '2021'
+    },
+    {
+        image: IMG_9820,
+        description: '2021'
+    },
+    {
+        image: IMG_9823,
+        description: '2021'
+    },
+    {
+        image: IMG_9825,
+        description: '2021'
+    },
+    {
+        image: IMG_9831,
+        description: '2021'
+    },
+]
 
 
 function Flash(){
@@ -21,55 +64,16 @@ function Flash(){
             </section>
             <section className="right">
                 <div className="img-gallery">
-                    <h3 style={{textAlign: 'left'}}>flashes<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h3>
-                    <div className="img__wrap">
-                        <img src={IMG_9805}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9806}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9808}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9809}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9810}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9811}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9816}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9820}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9823}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9825}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9831}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
-                    <div className="img__wrap">
-                        <img src={IMG_9837}/>
-                        <p style={{padding: '10px'}} className="img__description">Untitled. 2018.</p>
-                    </div>
+                    <h3 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h3>
+                    {flashes.map((flash, index) => {
+                        return (
+
+                            <div className="img__wrap" key={index}>
+                                <img src={flash.image}/>
+                                <p style={{padding: '10px'}} className="img__description">{flash.description}</p>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
         </div>

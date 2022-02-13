@@ -133,6 +133,7 @@ nav {
 .img__wrap:hover .img__description {
   visibility: visible;
   opacity: 1;
+  transform: scale(0.9)
   
 }
 
