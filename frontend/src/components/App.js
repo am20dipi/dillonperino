@@ -11,6 +11,8 @@ import Commissions from './Commissions.js'
 import Charcoal from './Charcoal.js'
 import Footer from './Footer.js'
 import Donate from './Donate.js'
+import 'semantic-ui-css/semantic.min.css' 
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route path="/charcoal" element={<Charcoal />} />
           <Route path="/commissions" element={<Commissions />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Contact from './Contact'
+import Social from './Social'
 
 
 
@@ -31,9 +31,12 @@ function Sidenav(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/donate">donate</Link>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/contact">contact</Link>
+                </li>
                 <br/>
                 <li className="nav-item">
-                    <Contact/>
+                    <Social/>
                 </li>
                 
             </ul>

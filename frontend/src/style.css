@@ -233,3 +233,9 @@ nav {
   display: grid;
   grid-gap: 10px;
 }
+
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+}

@@ -7,7 +7,7 @@ function Home(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right">
+            <section className="right" style={{paddingRight: '220px'}}>
                 <CarouselSlider/>
             </section>
         </div>

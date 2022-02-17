@@ -32,8 +32,8 @@ function Paintings(){
                     <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A deeper dive into my favorite medium.</p></h1>
                     {paintings.map((painting, index) => {
                         return (
-                            <div className="img__wrap">
-                                <img src={painting.image}/>
+                            <div className="img__wrap" key={index}>
+                                <img src={painting.image} alt="image" />
                                 <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> {painting.description} </p>
                             </div>
                         )

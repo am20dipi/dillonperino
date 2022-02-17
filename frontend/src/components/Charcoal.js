@@ -145,9 +145,8 @@ function Charcoal(){
                     <h1 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings spanning from 2016-present.</p></h1>
                     {charcoals.map((charcoal, index) => {
                         return (
-
                             <div className="img__wrap" key={index}>
-                                <img src={charcoal.image}/>
+                                <img src={charcoal.image} alt="image"/>
                                 <p style={{padding: '10px'}} className="img__description">{charcoal.description} </p>
                             </div>
                         )
