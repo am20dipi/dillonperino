@@ -69,7 +69,7 @@ function Flash(){
                         return (
 
                             <div className="img__wrap" key={index}>
-                                <img src={flash.image} alt="image"/>
+                                <img src={flash.image} alt={`flash-${index}`} />
                                 <p style={{padding: '10px'}} className="img__description">{flash.description}</p>
                             </div>
                         )

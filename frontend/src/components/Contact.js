@@ -1,66 +1,42 @@
-import { Form, Input, TextArea, Button } from 'semantic-ui-react';
-import Swal from 'sweetalert2'
-
-const SERVICE_ID = "**************";
-const TEMPLATE_ID = "*******";
-const USER_ID = "****************"
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import Sidenav from './Sidenav'
+const SERVICE_ID = "service_gtevzjd"
+const TEMPLATE_ID = 'template_xt3nuzr'
+const USER_ID = "user_OZ8yrsbGZtL9WvOSeGMEQ"
 
 function Contact(){
 
-    const handleOnSubmit = (e) => {
-        e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-          .then((result) => {
-            console.log(result.text);
-            Swal.fire({
-              icon: 'success',
-              title: 'Message Sent Successfully'
-            })
-          }, (error) => {
-            console.log(error.text);
-            Swal.fire({
-              icon: 'error',
-              title: 'Ooops, something went wrong',
-              text: error.text,
-            })
-          });
-        e.target.reset()
-      };
+    const form = useRef()
+
+    const sendEmail = (e) => {
+      e.preventDefault()
+  
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
+        .then((result) => {
+            console.log(result.text)
+        }, (error) => {
+            console.log(error.text)
+        })
+    }
+  
     return (
-        <>
-        
-            <Form onSubmit={handleOnSubmit}>
-                <Form.Field
-                    id='form-input-control-email'
-                    control={Input}
-                    label='Email'
-                    name='user_email'
-                    placeholder='Email…'
-                    required
-                    icon='mail'
-                    iconPosition='left'
-                />
-                <Form.Field
-                    id='form-input-control-last-name'
-                    control={Input}
-                    label='Name'
-                    name='user_name'
-                    placeholder='Name…'
-                    required
-                    icon='user circle'
-                    iconPosition='left'
-                />
-                <Form.Field
-                    id='form-textarea-control-opinion'
-                    control={TextArea}
-                    label='Message'
-                    name='user_message'
-                    placeholder='Message…'
-                    required
-                />
-                <Button type='submit' color='green'>Submit</Button>
-        </Form>
-        </>
+        <div className="wrapper" style={{display: 'flex'}}>
+            <section className="left">
+                <Sidenav/>
+            </section>
+            <section className="right">
+                <form ref={form} onSubmit={sendEmail}>
+                    <input type="text" name="user_name" placeholder="name"/>
+                    <br/>
+                    <input type="email" name="user_email" placeholder="email" />
+                    <br/>
+                    <textarea name="message" placeholder="type your message" />
+                    <br/>
+                    <input type="submit" value="Send" />
+                </form>
+            </section>
+        </div>
     )
 }
 

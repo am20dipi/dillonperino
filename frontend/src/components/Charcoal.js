@@ -146,7 +146,7 @@ function Charcoal(){
                     {charcoals.map((charcoal, index) => {
                         return (
                             <div className="img__wrap" key={index}>
-                                <img src={charcoal.image} alt="image"/>
+                                <img src={charcoal.image} alt={`charcoal-${index}`} />
                                 <p style={{padding: '10px'}} className="img__description">{charcoal.description} </p>
                             </div>
                         )

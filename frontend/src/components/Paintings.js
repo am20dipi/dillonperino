@@ -33,7 +33,7 @@ function Paintings(){
                     {paintings.map((painting, index) => {
                         return (
                             <div className="img__wrap" key={index}>
-                                <img src={painting.image} alt="image" />
+                                <img src={painting.image} alt={`painting-${index}`}  />
                                 <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> {painting.description} </p>
                             </div>
                         )

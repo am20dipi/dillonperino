@@ -64,7 +64,7 @@ function Commissions(){
                     {commissions.map((commission, index) => {
                         return (
                             <div style={{cursor: 'pointer'}} id="commission" key={index} onClick={() => window.open(commission.link)}>
-                                <img src={commission.image} alt="image" />
+                                <img src={commission.image} alt={`commission-${index}`} />
                                 <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> {commission.description}</p>
                             </div>
                         )
