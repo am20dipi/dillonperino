@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Sidenav from './Sidenav'
-import useForm from './useForm'
+
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -23,11 +23,16 @@ function Contact(){
     }
 
     const [formValues, setFormValues] = useState(initialValues)
+    const [errors, setErrors] = useState({})
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const form = useRef()
 
     const sendEmail = (e) => {
         e.preventDefault()
+
+        setErrors(validate(formValues))
+        setIsSubmit(true)
   
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
             .then((result) => {
@@ -38,8 +43,30 @@ function Contact(){
                 console.log(error)
                 errorNotify()
             })
+        
             
         e.target.reset()
+    }
+
+    useEffect(() => {
+        if (Object.keys(errors).length === 0 && isSubmit){
+            console.log(formValues)
+        }
+    }, [errors])
+
+
+    const validate = (values) => {
+        const errors = {}
+        if (!values.user_name){
+            errors.user_name = "Name is required."
+        }
+        if (!values.email){
+            errors.email = "Email is required."
+        }
+        if (!values.message){
+            errors.message = "Message is required."
+        }
+        return errors
     }
 
     const handleChange = (e) => {
@@ -76,15 +103,15 @@ function Contact(){
                     <label htmlFor="user_name">
                         <input type="text" name="user_name" onChange={handleChange} value={formValues.user_name} placeholder="name"/>
                     </label>
-                    
+                    <p className="text-muted">{errors.user_name}</p>
                     <label htmlFor="user_email">
                         <input type="email" name="user_email" onChange={handleChange} value={formValues.user_email} placeholder="email" />
                     </label>
-                    
+                    <p className="text-muted">{errors.email}</p>
                     <label htmlFor="message">
                         <textarea name="message" onChange={handleChange} value={formValues.message} placeholder="type your message" />
                     </label>
-                    
+                    <p className="text-muted">{errors.message}</p>
                     <input className="submit" type="submit" value="submit" />
                 </form>
             </section>
