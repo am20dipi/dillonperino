@@ -26,14 +26,21 @@ function Contact(){
                 <Sidenav/>
             </section>
             <section className="right">
+                <h1 style={{textAlign: 'left', paddingTop: '40px'}}>contact</h1>
                 <form ref={form} onSubmit={sendEmail}>
-                    <input type="text" name="user_name" placeholder="name"/>
-                    <br/>
-                    <input type="email" name="user_email" placeholder="email" />
-                    <br/>
-                    <textarea name="message" placeholder="type your message" />
-                    <br/>
-                    <input type="submit" value="Send" />
+                    <label htmlFor="user_name">
+                        <input type="text" name="user_name" placeholder="name"/>
+                    </label>
+                    
+                    <label htmlFor="user_email">
+                        <input type="email" name="user_email" placeholder="email" />
+                    </label>
+                    
+                    <label htmlFor="message">
+                        <textarea name="message" placeholder="type your message" />
+                    </label>
+                    
+                    <input className="submit" type="submit" value="submit" />
                 </form>
             </section>
         </div>

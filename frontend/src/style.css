@@ -235,7 +235,27 @@ nav {
 }
 
 form {
-  border: 1px solid lightgray;
-  border-radius: 10px;
+  margin-top: 20px;
   padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+label {
+  margin: 10px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 100px;
+  width: 100%;
+  resize: none;
+  background-color: #eeef;
+}
+
+input.submit {
+  margin: 10px;
+  width: 10%;
 }

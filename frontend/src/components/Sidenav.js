@@ -9,9 +9,7 @@ function Sidenav(){
             <h2>DILLON PERINO</h2>
             <ul className="navbar-nav">
                 <li className="nav-item" >
-                    <Link activeStyle={{
-                        fontWeight: 'bold'
-                    }} className="nav-link" to="/">home</Link>
+                    <Link className="nav-link" to="/">home</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/about">about</Link>
