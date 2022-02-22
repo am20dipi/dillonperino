@@ -250,7 +250,7 @@ label {
 
 textarea {
   min-height: 100px;
-  width: 100%;
+  width: 50%;
   resize: none;
   background-color: #eeef;
 }
