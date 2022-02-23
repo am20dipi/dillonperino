@@ -64,7 +64,7 @@ function Flash(){
             </section>
             <section className="right">
                 <div className="img-gallery">
-                    <h3 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h3>
+                    <h1 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h1>
                     {flashes.map((flash, index) => {
                         return (
 

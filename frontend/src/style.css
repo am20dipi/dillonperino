@@ -167,6 +167,12 @@ nav {
   .right {
     width: 100%;
   }
+  .center{ 
+    width: 100%
+  }
+  .submit {
+    width: 100%
+  }
 
 }
 

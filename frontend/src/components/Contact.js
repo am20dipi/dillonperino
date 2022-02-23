@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Sidenav from './Sidenav'
+import IMG_9796 from '../images/charcoals/IMG_9796.jpg'
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -105,7 +106,10 @@ function Contact(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right" style={{flex: '90%', paddingLeft: '100px'}}>
+            <section className="center" style={{flex: '30%', paddingTop: '100px', paddingLeft:'70px'}}>
+                <img width='70%' src={IMG_9796} alt="charlie"/>
+            </section>
+            <section className="right" style={{flex: '50%'}}>
             <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email. I will get back to you ASAP. </p></h1>
                 <form ref={form} onSubmit={sendEmail}>
                     <label htmlFor="user_name">
