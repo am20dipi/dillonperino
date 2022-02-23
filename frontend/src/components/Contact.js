@@ -106,7 +106,7 @@ function Contact(){
                 <Sidenav/>
             </section>
             <section className="right" style={{flex: '90%', paddingLeft: '100px'}}>
-            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email.</p></h1>
+            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email. I will get back to you ASAP. </p></h1>
                 <form ref={form} onSubmit={sendEmail}>
                     <label htmlFor="user_name">
                         <input type="text" name="user_name" onChange={handleChange} value={formValues.user_name} placeholder="name" required/>
