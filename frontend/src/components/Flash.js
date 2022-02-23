@@ -63,7 +63,7 @@ function Flash(){
                 <Sidenav/>
             </section>
             <section className="right">
-                <div className="img-gallery">
+                <div className="img-gallery" id="flash-gallery">
                     <h1 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h1>
                     {flashes.map((flash, index) => {
                         return (

@@ -24,14 +24,12 @@ const Result = () => {
 
 function Contact(){
     const initialValues = {
-        user_name: '',
-        user_email: '',
+        name: '',
+        email: '',
         message: ''
     }
 
     const [formValues, setFormValues] = useState(initialValues)
-    const [errors, setErrors] = useState({})
-    const [isSubmit, setIsSubmit] = useState(false)
     const [result, showResult] = useState(false)
 
     const form = useRef()
@@ -39,53 +37,35 @@ function Contact(){
     const sendEmail = (e) => {
         e.preventDefault()
 
-        setErrors(validate(formValues))
-        setIsSubmit(true)
   
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
             .then((result) => {
                 console.log(result.text)
-                successNotify()
+                
             })
             .catch((error) => {
                 console.log(error)
-                errorNotify()
             })
-        
-            
+        successNotify()    
         e.target.reset()
-        showResult(true)
+        debugger
+        setInterval(() => {
+            showResult(true)
+        }, 2000)
+        
     }
 
-    useEffect(() => {
-        if (Object.keys(errors).length === 0 && isSubmit){
-            console.log(formValues)
-        }
-    }, [errors])
-
-
-    const validate = (values) => {
-        const errors = {}
-        if (!values.user_name){
-            errors.user_name = "Name is required."
-        }
-        if (!values.user_email){
-            errors.user_email = "Email is required."
-        }
-        if (!values.message){
-            errors.message = "Message is required."
-        }
-        return errors
-    }
+  
 
     const handleChange = (e) => {
         e.preventDefault()
         const { name, value } = e.target
-
+        
         setFormValues({
             ...formValues,
             [name]: value
         })
+        
         console.log(formValues)
     }
 
@@ -94,10 +74,6 @@ function Contact(){
     const successNotify = () => {
         toast.success('Message sent!', { position: toast.POSITION.TOP_RIGHT})
         
-    }
-
-    const errorNotify = () => {
-        toast.error('Something went wrong. Try again.', { position: toast.POSITION.TOP_RIGHT})
     }
 
   
@@ -110,18 +86,18 @@ function Contact(){
                 <img width='70%' src={IMG_9796} alt="charlie"/>
             </section>
             <section className="right" style={{flex: '50%'}}>
-            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email. I will get back to you ASAP. </p></h1>
+            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '20px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email. I will get back to you ASAP. </p></h1>
                 <form ref={form} onSubmit={sendEmail}>
-                    <label htmlFor="user_name">
-                        <input type="text" name="user_name" onChange={handleChange} value={formValues.user_name} placeholder="name" required/>
-                    </label>
-                    <label htmlFor="user_email">
-                        <input type="email" name="user_email" onChange={handleChange} value={formValues.user_email} placeholder="email" required />
-                    </label>
+                    <label htmlFor="name"></label>
+                    <input type="text" name="name" onChange={handleChange} placeholder="name" required/>
+                    
+                    <label htmlFor="email"></label>
+                     <input type="email" name="email" onChange={handleChange}  placeholder="email" required />
+                    
 
-                    <label htmlFor="message">
-                        <textarea name="message" onChange={handleChange} value={formValues.message} placeholder="type your message" required/>
-                    </label>
+                    <label htmlFor="message"></label>
+                        <textarea name="message" onChange={handleChange} placeholder="type your message" required/>
+                    
                     <input className="submit" type="submit" value="submit" />
                 </form>
                 <div className="row">

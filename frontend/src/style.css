@@ -168,10 +168,10 @@ nav {
     width: 100%;
   }
   .center{ 
-    width: 100%
+    width: 100%;
   }
   .submit {
-    width: 100%
+    width: 100%;
   }
 
 }
@@ -269,3 +269,4 @@ input.submit {
 .nav-link .active{
   font-weight: bold !important;
 }
+

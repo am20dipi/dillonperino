@@ -28,7 +28,7 @@ function Paintings(){
             </section>
             <section className="right">
             
-                <div className="img-gallery">
+                <div className="img-gallery" style={{display: 'flex'}}>
                     <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A quick glance into one of my favorite mediums.</p></h1>
                     {paintings.map((painting, index) => {
                         return (
