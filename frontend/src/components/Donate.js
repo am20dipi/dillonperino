@@ -6,16 +6,16 @@ function Donate() {
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right">
-                <div className="container" style={{textAlign: 'left'}}>
-                    <h1>donate, educate</h1>
+            <section className="right" style={{paddingLeft: '100px', paddingTop: '40px'}}>
+            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>donate</h1>
+
                     <ul>
                         <li style={{listStyle:'none'}}><a href="https://blacklivesmatters.carrd.co/" target="_blank" rel="noreferrer">black lives matter</a></li>
                         <li style={{listStyle:'none'}}><a href="https://mutualaid.carrd.co/" target="_blank" rel="noreferrer">mutual aid</a></li>
                         <li style={{listStyle:'none'}}><a href="https://www.naacpldf.org/" target="_blank" rel="noreferrer">NAACP Legal Defense Fund</a></li>
                         
                     </ul>
-                </div>
+             
                 
             </section>
         </div>

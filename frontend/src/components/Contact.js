@@ -15,6 +15,12 @@ const USER_ID = "user_OZ8yrsbGZtL9WvOSeGMEQ"
 
 toast.configure()
 
+const Result = () => {
+    return (
+        <p>Your message has been successfully sent.</p>
+    )
+}
+
 function Contact(){
     const initialValues = {
         user_name: '',
@@ -25,6 +31,7 @@ function Contact(){
     const [formValues, setFormValues] = useState(initialValues)
     const [errors, setErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
+    const [result, showResult] = useState(false)
 
     const form = useRef()
 
@@ -46,6 +53,7 @@ function Contact(){
         
             
         e.target.reset()
+        showResult(true)
     }
 
     useEffect(() => {
@@ -60,8 +68,8 @@ function Contact(){
         if (!values.user_name){
             errors.user_name = "Name is required."
         }
-        if (!values.email){
-            errors.email = "Email is required."
+        if (!values.user_email){
+            errors.user_email = "Email is required."
         }
         if (!values.message){
             errors.message = "Message is required."
@@ -97,23 +105,24 @@ function Contact(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right" style={{flex: '90%'}}>
-                <h1 style={{textAlign: 'left', paddingTop: '40px'}}>contact</h1>
+            <section className="right" style={{flex: '90%', paddingLeft: '100px'}}>
+            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>contact<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>Feel free to contact me here, via Instagram or email.</p></h1>
                 <form ref={form} onSubmit={sendEmail}>
                     <label htmlFor="user_name">
-                        <input type="text" name="user_name" onChange={handleChange} value={formValues.user_name} placeholder="name"/>
+                        <input type="text" name="user_name" onChange={handleChange} value={formValues.user_name} placeholder="name" required/>
                     </label>
-                    <p className="text-muted">{errors.user_name}</p>
                     <label htmlFor="user_email">
-                        <input type="email" name="user_email" onChange={handleChange} value={formValues.user_email} placeholder="email" />
+                        <input type="email" name="user_email" onChange={handleChange} value={formValues.user_email} placeholder="email" required />
                     </label>
-                    <p className="text-muted">{errors.email}</p>
+
                     <label htmlFor="message">
-                        <textarea name="message" onChange={handleChange} value={formValues.message} placeholder="type your message" />
+                        <textarea name="message" onChange={handleChange} value={formValues.message} placeholder="type your message" required/>
                     </label>
-                    <p className="text-muted">{errors.message}</p>
                     <input className="submit" type="submit" value="submit" />
                 </form>
+                <div className="row">
+                    {result ? <Result/> : null }
+                </div>
             </section>
         </div>
     )

@@ -29,7 +29,7 @@ function Paintings(){
             <section className="right">
             
                 <div className="img-gallery">
-                    <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A deeper dive into my favorite medium.</p></h1>
+                    <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A quick glance into one of my favorite mediums.</p></h1>
                     {paintings.map((painting, index) => {
                         return (
                             <div className="img__wrap" key={index}>
