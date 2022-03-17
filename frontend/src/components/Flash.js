@@ -1,4 +1,6 @@
 import Sidenav from "./Sidenav"
+import React, { useState } from 'react'
+
 import IMG_9805 from '../images/flash/IMG_9805.jpg'
 import IMG_9806 from '../images/flash/IMG_9806.jpg'
 import IMG_9808 from '../images/flash/IMG_9808.jpg'
@@ -57,19 +59,33 @@ const flashes = [
 
 
 function Flash(){
+    const [modal, setModal] = useState(false)
+    const [tempImgSrc, setTempImgSrc] = useState('')
+
+
+    const getImage = (image) => {
+        setTempImgSrc(image)
+        
+        setModal(true)
+        debugger
+    }
+
     return (
         <div className="wrapper" style={{display: 'flex'}}>
             <section className="left">
                 <Sidenav/>
             </section>
             <section className="right">
+                <div className={modal ? "modal open" : "modal" }>
+                    <img src={tempImgSrc}/>
+                </div>
                 <div className="img-gallery" id="flash-gallery">
                     <h1 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h1>
                     {flashes.map((flash, index) => {
                         return (
 
-                            <div className="img__wrap" key={index}>
-                                <img src={flash.image} alt={`flash-${index}`} />
+                            <div className="img_wrap" key={index} onClick={() => getImage(flash.image)}>
+                                <img src={flash.image}  alt={`flash-${index}`}  />
                                 <p style={{padding: '10px'}} className="img__description">{flash.description}</p>
                             </div>
                         )
