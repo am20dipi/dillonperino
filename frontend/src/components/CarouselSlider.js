@@ -1,7 +1,8 @@
 import congruent from '../images/congruent.png'
 import brighterside from '../images/brighterside.png'
 import inbetween from '../images/inbetween.png'
-import Carousel from 'react-bootstrap/carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const slides = [
     {
@@ -23,24 +24,31 @@ const slides = [
 
 function CarouselSlider(){
     return (
-        <Carousel className="carousel-fade">
-            {slides.map((slide, index) => {
-                return (
-                    <Carousel.Item key={index}>
-                        <img
-                            className="d-block w-100"
-                            src={slide.img}
-                            alt={slide.name}
-                            style={{width: '220px'}}
-                        />
-                        <Carousel.Caption style={{color: 'white'}}>
-                            <h2 style={{fontSize: '30px', fontFamily: 'helvetica'}}>{slide.name}</h2>
-                            <p>{slide.description}</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                )
-            })}
-            </Carousel>
+        <div className="carousel-wrapper">
+
+            <Carousel infiniteLoop interval={5000} useKeyboardArrows swipeable autoPlay showArrows={false} showStatus={false} showThumbs={false} className="carousel">
+                {slides.map((slide, index) => {
+                    return (
+                        <div className="carousel-slide" key={index}>
+                            <figure>
+                                <img
+                                    className="d-block w-100"
+                                    src={slide.img}
+                                    alt={slide.name}
+                                    style={{width: '220px'}}
+                                />
+                                <figcaption>
+                                    <h2 style={{fontSize: '20px', fontFamily: 'Syncopate'}}>{slide.name}</h2>
+                                    <p>{slide.description}</p>
+                                </figcaption>
+                            </figure>
+                            <br/>
+                        </div>
+                    )
+                })}
+                </Carousel>
+        </div>
+    
     )
 }
 

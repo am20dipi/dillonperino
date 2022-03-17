@@ -49,31 +49,12 @@ h2 {
 
 /* carousel  */
 
-.carousel img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
 
-.carousel-item,
-.carousel-inner,
-.carousel-inner img {
-  height: 100%;
-  width: auto;
-}
-
-.carousel-item {
-  text-align: center;
+.carousel-wrapper{
+  width: 70%;
 }
 
 
-.carousel {
-  height: 700px;
-}
-
-.carousel-control {
-  opacity: 0;
-}
 
 /* image gallery */
 
@@ -144,9 +125,6 @@ h2 {
 /* mobile */
 
 @media screen and (max-width: 480px){
-  .wrapper{
-    
-  }
   .left {
     padding-right: 0;
     flex: 10% !important;
@@ -184,7 +162,11 @@ h2 {
   .right#about{
     display:none;
   }
-
+  .right#home {
+    padding-right: 50px;
+    padding-top: 150px;
+  }
+  
   
 
 }
@@ -253,8 +235,6 @@ h2 {
   font-size: 40px;
   color: black
 }
-
-/* about page  */
 
 
 
