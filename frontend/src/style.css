@@ -29,23 +29,25 @@ h2 {
   padding: 0px 10px;
 }
 
+.wrapper {
+  display: flex;
+}
 
-nav {
-  position: relative;
-  margin: 0;
-  padding-top: 0px;
-  top: 0;
+.left {
+  flex: 15%;
+  padding: 30px;
+}
+
+.right { 
+  flex: 85%;
+  padding: 30px;
 }
 
 
-.page-footer{
-  bottom: 0;
-}
 
-.fa-instagram {
-  font-size: 40px;
-  color: black
-}
+
+
+/* carousel  */
 
 .carousel img {
   height: 100%;
@@ -73,6 +75,8 @@ nav {
   opacity: 0;
 }
 
+/* image gallery */
+
 .img-gallery {
   width: 80%;
   margin: 100px auto 50px;
@@ -92,7 +96,6 @@ nav {
   height: 100%;
   width: 100%;
   object-fit: cover;
-
 }
 
 .img__description {
@@ -105,8 +108,6 @@ nav {
   color: rgb(2, 2, 2);
   visibility: hidden;
   opacity: 0;
-
-  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
@@ -120,8 +121,6 @@ nav {
   color: rgb(2, 2, 2);
   visibility: hidden;
   opacity: 0;
-
-  /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
@@ -141,39 +140,56 @@ nav {
 }
 
 
-.wrapper {
-  display: flex;
-}
 
-.left {
-  flex: 15%;
-  padding: 30px;
-}
+/* mobile */
 
-.right { 
-  flex: 85%;
-  padding: 30px;
-}
-
-
-@media only screen and (max-width: 640px){
-  .wrapper {
-    display: block;
+@media screen and (max-width: 480px){
+  .wrapper{
+    
   }
   .left {
-    width: 100%;
+    padding-right: 0;
+    flex: 10% !important;
   }
   .right {
     width: 100%;
+    flex-direction: column;
+    flex: 90% !important;
+    padding-left: 0;
   }
-  .center{ 
-    width: 100%;
+  .img-gallery{
+    grid-column: 1; 
   }
-  .submit {
-    width: 100%;
+  form {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: small;
+  }
+  .right p {
+    margin-left: 10px;
+  }
+  .right#donate{
+    padding-left: 0 !important;
+    padding-top: 50px !important;
   }
 
+  .right .img-gallery img {
+    padding-right: 20px;
+  }
+  .center {
+    padding-left: 0 !important;
+    display: block;
+  }
+  .right#about{
+    display:none;
+  }
+
+  
+
 }
+
+/* navbar */
 
 .nav-link:hover {
   font-weight: bold;
@@ -183,6 +199,8 @@ nav {
   color: black !important;
 }
 
+
+/* social link menu */
 
 .social-menu{
   text-align: left;
@@ -231,43 +249,60 @@ nav {
   transform: translate(8px, 0);
 }
 
-
-#about {
-  width: 80%;
-  margin: 100px auto 50px;
-  display: grid;
-  grid-gap: 10px;
+.fa-instagram {
+  font-size: 40px;
+  color: black
 }
 
+/* about page  */
+
+
+
+/* contact form  */
 form {
   margin-top: 20px;
   padding: 20px;
-  width: 100%;
+  width: 70%;
   max-width: 700px;
   box-sizing: border-box;
   background-color: #fff;
 }
 
-label {
-  margin: 10px;
+input {
   width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid rgb(39, 39, 39);
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+  margin-bottom: 100px;
 }
 
 textarea {
-  min-height: 100px;
-  width: 50%;
-  resize: none;
-  background-color: #eeef;
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid rgb(39, 39, 39);
 }
 
-input.submit {
-  margin: 10px;
-  width: 10%;
+button.submit{
+  border: none;
+  padding: 7px 10px;
+  font-size: small;
+  background-color:rgb(175, 175, 175);
+  cursor: pointer;
 }
 
-.nav-link .active{
-  font-weight: bold !important;
+.submit:hover{
+  background-color:rgb(214, 223, 201);
+  transition: 0.6s ease-in
 }
+
+
+/* modal  */
 
 .modal {
   width: 100%;

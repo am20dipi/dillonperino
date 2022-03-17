@@ -25,7 +25,7 @@ function About(){
                 </div>
                     <br/>
             </section> 
-            <section className="right" style={{margin: '0', flex: '50%'}}>  
+            <section className="right" id="about" style={{paddingTop: '122px', margin: '0', flex: '50%'}}>  
                 <img style={{width: '70%'}} src={selfportrait} alt="self portrait"/>
                 {/* <figcaption style={{fontStyle: 'italic', textAlign: 'center'}} className="text-muted">Self portrait. Oil on canvas board. 2020.</figcaption> */}
             </section>

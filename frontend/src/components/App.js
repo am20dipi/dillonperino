@@ -8,7 +8,6 @@ import Contact from './Contact.js'
 import Flash from './Flash.js'
 import Commissions from './Commissions.js'
 import Charcoal from './Charcoal.js'
-import Footer from './Footer.js'
 import Donate from './Donate.js'
 
 

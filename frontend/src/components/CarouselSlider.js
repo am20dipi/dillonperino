@@ -26,7 +26,6 @@ function CarouselSlider(){
         <Carousel className="carousel-fade">
             {slides.map((slide, index) => {
                 return (
-
                     <Carousel.Item key={index}>
                         <img
                             className="d-block w-100"

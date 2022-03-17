@@ -6,7 +6,7 @@ function Donate() {
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right" style={{paddingLeft: '100px', paddingTop: '40px'}}>
+            <section id="donate" className="right" style={{paddingLeft: '100px', paddingTop: '40px'}}>
             <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>donate</h1>
 
                     <ul>
