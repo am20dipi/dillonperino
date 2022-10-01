@@ -6,8 +6,8 @@ function Donate() {
             <section className="left">
                 <Sidenav/>
             </section>
-            <section id="donate" className="right" style={{paddingLeft: '100px', paddingTop: '40px'}}>
-            <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>donate</h1>
+            <section id="donate" className="right" style={{paddingLeft: '100px', paddingTop: '260px'}}>
+            {/* <h1 style={{textAlign: 'left', paddingTop: '45px', paddingLeft: '29px'}}>donate</h1> */}
 
                     <ul>
                         <li style={{listStyle:'none'}}><a href="https://blacklivesmatters.carrd.co/" target="_blank" rel="noreferrer">black lives matter</a></li>

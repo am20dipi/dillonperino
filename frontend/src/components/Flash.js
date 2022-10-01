@@ -75,12 +75,12 @@ function Flash(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right">
+            <section className="right" style={{flex: '90%'}}>
                 <div className={modal ? "modal open" : "modal" }>
                     <img src={tempImgSrc}/>
                 </div>
                 <div className="img-gallery" id="flash-gallery">
-                    <h1 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h1>
+                    {/* <h1 style={{textAlign: 'left'}}>flash<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>My introduction into tattooing.</p></h1> */}
                     {flashes.map((flash, index) => {
                         return (
 

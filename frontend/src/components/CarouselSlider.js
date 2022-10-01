@@ -25,7 +25,6 @@ const slides = [
 function CarouselSlider(){
     return (
         <div className="carousel-wrapper">
-
             <Carousel infiniteLoop interval={5000} useKeyboardArrows swipeable autoPlay showArrows={false} showStatus={false} showThumbs={false} className="carousel">
                 {slides.map((slide, index) => {
                     return (
@@ -35,8 +34,8 @@ function CarouselSlider(){
                                     className="d-block w-100"
                                     src={slide.img}
                                     alt={slide.name}
-                                    style={{width: '220px'}}
                                 />
+                                <br/>
                                 <figcaption>
                                     <h2 style={{fontSize: '20px', fontFamily: 'Syncopate'}}>{slide.name}</h2>
                                     <p>{slide.description}</p>

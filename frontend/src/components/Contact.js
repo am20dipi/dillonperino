@@ -53,14 +53,14 @@ function Contact(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right" >
-            <p className="text-muted" style={{fontSize:'medium', paddingTop: '65px'}}>Feel free to contact me here, via Instagram or email. I will get back to you ASAP. </p>
-                        <form ref={form} onSubmit={sendEmail} className="contact-form">
-                            <input type="text" placeholder="name" name="name" required />
-                            <input type="email" placeholder="email" name="email" required/>
-                            <textarea rows="5" placeholder="type your message here" name="message"required />
-                            <button className="submit">submit</button>
-                        </form>
+            <section className="right" style={{paddingTop: '150px', paddingRight: '200px'}}>
+                <p className="text-muted" style={{fontSize:'medium', paddingLeft: '20px'}}>Feel free to contact me here, via Instagram or email.</p>
+                    <form ref={form} onSubmit={sendEmail} className="contact-form" style={{padding: '10px'}}>
+                        <input type="text" placeholder="name" name="name" required />
+                        <input type="email" placeholder="email" name="email" required/>
+                        <textarea rows="5" placeholder="type your message here" name="message"required />
+                        <button className="submit">submit</button>
+                    </form>
                 
             </section>
         </div>

@@ -52,15 +52,14 @@ function Commissions(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right">
-            
+            <section className="right" style={{flex: '90%'}}>
                 <div className="img-gallery">
-                    <h1 style={{textAlign: 'left'}}>
-                        commissions
+                    {/* <h1 style={{textAlign: 'left'}}>
+                        commissions */}
                         <p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>
                             Click to listen. 
                         </p>
-                    </h1>
+                    {/* </h1> */}
                     {commissions.map((commission, index) => {
                         return (
                             <div style={{cursor: 'pointer'}} id="commission" key={index} onClick={() => window.open(commission.link)}>

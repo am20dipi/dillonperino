@@ -142,7 +142,7 @@ function Charcoal(){
 
             <section className="right" style={{flex: '90%'}}>
                 <div className="img-gallery">
-                    <h1 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings spanning from 2016-present.</p></h1>
+                    {/* <h1 style={{textAlign: 'left'}}>charcoal<p style={{fontSize:'medium', textAlign: 'left' }} className="text-muted">A collection of charcoal drawings spanning from 2016-present.</p></h1> */}
                     {charcoals.map((charcoal, index) => {
                         return (
                             <div className="img__wrap" key={index}>

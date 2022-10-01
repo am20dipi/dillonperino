@@ -34,13 +34,14 @@ h2 {
 }
 
 .left {
-  flex: 15%;
+  flex: 20%;
   padding: 30px;
 }
 
 .right { 
-  flex: 85%;
+  flex: 40%;
   padding: 30px;
+  padding-top: 40px;
 }
 
 
@@ -51,7 +52,7 @@ h2 {
 
 
 .carousel-wrapper{
-  width: 70%;
+  width: 50%;
 }
 
 
@@ -67,9 +68,19 @@ h2 {
 }
 
 .img-gallery img {
+  width: 80%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+#painting {
   width: 100%;
   cursor: pointer;
   object-fit: cover;
+}
+
+.img-gallery #painting {
+  display: inline-block;
 }
 
 .img__wrap {
@@ -79,7 +90,7 @@ h2 {
   object-fit: cover;
 }
 
-.img__description {
+/* .img__description {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -90,24 +101,11 @@ h2 {
   visibility: hidden;
   opacity: 0;
   transition: opacity .2s, visibility .2s;
-}
+} */
 
-.img__description#painting {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(209, 220, 226, 0.72);
-  color: rgb(2, 2, 2);
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .2s, visibility .2s;
-}
-
-.img__wrap:hover .img__description#painting {
-  visibility: visible;
-  opacity: 1;
+.img__description {
+  visibility: collapse;
+  text-align: left;
 }
 
 .img__wrap:hover .img__description {

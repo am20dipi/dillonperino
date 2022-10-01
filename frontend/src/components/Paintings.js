@@ -26,15 +26,14 @@ function Paintings(){
             <section className="left">
                 <Sidenav/>
             </section>
-            <section className="right">
-            
-                <div className="img-gallery" >
-                    <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A quick glance into one of my favorite mediums.</p></h1>
+            <section className="right" style={{flex: '90%'}}>
+                <div className="img-gallery" id="painting" >
+                    {/* <h1 style={{textAlign: 'left'}}>oil<p className="text-muted" style={{fontSize:'medium', textAlign: 'left' }}>A quick glance into one of my favorite mediums.</p></h1> */}
                     {paintings.map((painting, index) => {
                         return (
                             <div className="img__wrap" key={index}>
-                                <img src={painting.image} alt={`painting-${index}`}  />
-                                <p style={{padding: '10px', textAlign: 'center'}} id="painting" className="img__description"> {painting.description} </p>
+                                <img src={painting.image} alt={`painting-${index}`} id="painting" />
+                                <p className="img__description"> {painting.description} </p>
                             </div>
                         )
                     })}
